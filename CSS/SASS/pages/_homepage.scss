@@ -1,0 +1,449 @@
+@use "../help/variable" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightGreenAlt;
+  font-family: "Open Sans", sans-serif;
+}
+
+.background-image {
+  color: $lightGreenAlt;
+  .firstBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(221 229 188 / 60%);
+    z-index: -1;
+  }
+}
+.nav-bar {
+  color: $lightGreenAlt;
+  .brandName {
+    a {
+      color: $lightGreenAlt;
+    }
+    h1 {
+      cursor: pointer;
+      font-style: italic;
+      width: 130px;
+      height: 130px;
+      border: 2px solid $darkGreen;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -115px;
+        border: 100px solid;
+        border-color: transparent transparent $darkGreen transparent;
+        z-index: -1;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        border: 100px solid;
+        border-color: $darkGreen transparent transparent;
+        z-index: -1;
+      }
+    }
+  }
+  .links {
+    margin-top: -70px;
+    li {
+      display: inline-block;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom: 3px solid $darkGreen;
+      }
+      a {
+        color: $lightGreenAlt;
+      }
+    }
+    li.active a,
+    li a:hover {
+      color: $darkGreenAlt;
+    }
+  }
+  .toggle-menu {
+    background: none;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: none;
+    position: relative;
+    margin-right: 25px;
+    &.menu-active::before{
+      content: '';
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent $lightGreenAlt transparent ;
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+    }
+    span {
+      display: block;
+      background-color: $darkGreen;
+      height: 4px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+
+.header {
+  .overlay {
+    .bx-wrapper {
+      background-color: transparent;
+      border: none;
+      margin-top: 90px;
+      box-shadow: none;
+      .bx-pager.bx-default-pager a {
+        display: none;
+      }
+    }
+    .bxslider {
+      .bxslider-text {
+        padding: 10px 50px 10px 60px;
+        line-height: 2rem;
+        h2 {
+          color: $darkGreenAlt;
+          span {
+            color: $darkGreen;
+            font-size: 3rem;
+          }
+        }
+        p {
+          color: $darkGreenAlt;
+        }
+      }
+    }
+  }
+}
+
+.special-h {
+    position: relative;
+    margin: 0 0 50px;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 55px;
+        left: 455px;
+        width: 210px;
+        border-bottom: 5px solid $darkGreenAlt;
+    }
+}
+
+.ourservices {
+    margin-top: 20px;
+    padding: 50px 20px;
+    h2 {
+        color: $darkGreen;
+    }
+    .serviceCont {
+        border: 2px solid $darkGreenAlt;
+        padding: 25px 20px;
+        box-shadow: -10px 10px 0px 0px #036268;
+        border-radius: 10%;
+        margin-left: 3%;
+        margin-top: 60px;
+        .serviceIcon {
+            height: 50px;
+            margin-left: 42%;
+            color: #1abc9c;
+        }
+        .info {
+            h3 {
+                color: $darkGreen;
+                margin-top: 10px;
+            }
+            p {
+                color: $darkGreenAlt;
+                line-height: 2rem;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.separator {
+    border: 2px solid #eee;
+}
+
+.ourPortfolio {
+  margin-top: 70px;
+  padding: 50px 10px 50px 10px;
+  .portfolioInfo {
+    h3 {
+      color: $darkGreen;
+      padding: 10px;
+    }
+    .special-h::after {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 200px;
+    }
+    p {
+      color: $darkGreenAlt;
+      margin-top: 15px;
+      line-height: 1.5rem;
+      padding: 0 10px 10px;
+    }
+  }
+  .portfolioImage {
+    .teamImage {
+      .overlay {
+        position: absolute;
+        top: 0px;
+        left: 12px;
+        width: 89%;
+        height: 100%;
+        line-height: 183px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $darkGreen;
+        text-align: center;
+        background-color: rgb(155 198 168 / 50%);
+        display: none;
+        border-radius: 20%;
+        -webkit-border-radius: 20%;
+        -moz-border-radius: 20%;
+        -ms-border-radius: 20%;
+        -o-border-radius: 20%;
+      }
+      &:hover .overlay {
+        display: block;
+      }
+      img {
+        -webkit-border-radius: 20%;
+        -moz-border-radius: 20%;
+        -ms-border-radius: 20%;
+        -o-border-radius: 20%;
+        border-radius: 20%;
+        height: 190px;
+        width: 100%;
+        border: 1px solid $darkGreen;
+        box-shadow: 6px 5px 0px 0px $darkGreen;
+      }
+    }
+  }
+}
+
+.testimonials {
+  background-image: url(/DTS/Data/P7.jpg);
+  background-size: cover;
+  height: 400px;
+  margin-top: 100px;
+  padding: 40px 10px 50px 10px;
+  z-index: -2;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $darkGreen;
+    background-color: rgba(221, 229, 188, 0.6);
+    z-index: -1;
+  }
+  h3 {
+    margin-top: 50px;
+    color: $darkGreen;
+  }
+  .special-h {
+    
+  }
+  .slider {
+    .active {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  p{
+    color: $darkGreenAlt;
+    line-height: 2rem;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  span {
+    margin-left: 45%;
+    color: $darkGreenAlt;
+    margin-top: 50px;
+  }
+}
+
+.project {
+  margin-top: 50px;
+  color: $darkGreen;
+  padding: 30px 10px;
+  .special-h::after {
+    top: 45px;
+    left: -6px;
+    width: 145px;
+  }
+  .projectLink {
+    color: $darkGreenAlt;
+    li {
+      display: inline-block;
+      border: 2px solid $lightGreen;
+      padding: 10px;
+      -webkit-border-radius: 10%;
+      -moz-border-radius: 10%;
+      -ms-border-radius: 10%;
+      -o-border-radius: 10%;
+      border-radius: 10%;
+      margin-right: 5px;
+      cursor: pointer;
+      box-shadow: 0px 0px 0px 1px $darkGreen;
+      &:hover {
+        background-color: $darkGreen;
+        color: $lightGreenAlt;
+      }
+    }
+    .Selected {
+      background-color: $darkGreen;
+      color: $lightGreenAlt;
+    }
+  }
+  .gallery {
+    margin-top: 25px;
+    div {
+      div {
+        .galImage {
+          width: 100%;
+          height: 261px;
+          margin-top: 25px;
+          border: 2px solid #333;
+          border-radius: 10%;
+          box-shadow: 0px 0px 2px 1px #04475080;
+        }
+        .overlay {
+          position: absolute;
+          top: 25px;
+          left: 12px;
+          width: 92%;
+          height: 91%;
+          font-size: 20px;
+          color: $lightGreenAlt;
+          background-color: rgba(155, 198, 168, 0.5);
+          padding-top: 40%;
+          border-radius: 10%;
+          text-shadow: 2px 2px 5px black;
+          display: none;
+          cursor: pointer;
+        }
+        .heartIcon {
+          position: absolute;
+          bottom: 10px;
+          right: 30px;
+          color: $darkGreen;
+          font-weight: bold;
+          text-shadow: 0px 0px 3px $lightGreenAlt;
+          display: none;
+        }
+        &:hover .overlay,
+        &:hover .heartIcon {
+            display: block;
+        }
+      }
+    }
+    .hide {
+      width: 100%;
+    }
+  }
+}
+
+.contact {
+  background-color: $darkGreen;
+  padding: 50px 10px 10px;
+  color: $lightGreenAlt;
+  .about {
+    h3 {
+
+    }
+    p {
+      line-height: 1.75rem;
+      font-weight: 500;
+    }
+    .socIcons {
+      .icon {
+        cursor: pointer;
+      }
+    }
+  }
+  .tags {
+      span {
+        border: 2px solid #dde5bc;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 10%;
+        width: auto;
+        text-transform: uppercase;
+      }
+      .link {
+        
+      }
+    }
+  .posts {
+    h3 {
+
+    }
+    .post {
+      .postImage {
+        height: 90px;
+      }
+      p {
+        line-height: 2rem;
+      }
+    }
+  }
+  .blog {
+    h3 {
+
+    }
+    ul {
+      li {
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .special-h::after {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #dde5bc;
+      }
+    }
+  }
+  .mero {
+    color: $lightGreenAlt;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
