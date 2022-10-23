@@ -398,8 +398,15 @@ body {
   text-transform: uppercase;
 }
 
-.background-image .firstBack {
-  height: 830px !important;
+@media (max-width: 600px) {
+  .background-image .firstBack {
+    height: 830px !important;
+  }
+}
+@media (max-width: 600px) {
+  .background-image .overlay {
+    height: 830px !important;
+  }
 }
 
 @media (max-width: 600px) {

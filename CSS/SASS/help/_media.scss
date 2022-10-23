@@ -4,7 +4,14 @@
 
 .background-image {
     .firstBack {
-        height: 830px !important;
+        @media (max-width: $maxMobile) {
+            height: 830px !important;
+        }
+    }
+    .overlay {
+        @media (max-width: $maxMobile) {
+            height: 830px !important;
+        }
     }
 }
 
