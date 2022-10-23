@@ -2,6 +2,11 @@
 @use '../pages/homepage' as *;
 
 
+.background-image {
+    .firstBack {
+        height: 830px !important;
+    }
+}
 
 .nav-bar {
     .brandName {
@@ -10,6 +15,27 @@
         }
         @media (min-width: $maxSmall) and (max-width: $maxMedium) {
             margin-left: -75px;
+        }
+        a {
+            h1 {
+                @media (max-width: $maxSmall) {
+                    font-size: 20px;
+                    width: 90px;
+                    height: 85px;
+                }
+                &::after {
+                    @media (max-width: $maxSmall) {
+                        border-width: 60px;
+                        top: -65px;
+                    }
+                }
+                &::before {
+                    @media (max-width: $maxSmall) {
+                        border-width: 60px;
+                        top: 30px;
+                    }
+                }
+            }
         }
     }
     .links {
@@ -70,7 +96,9 @@
                     line-height: 2.5rem;
                 }
                 span {
-                    font-size: 1.5rem !important;
+                    @media (max-width: $maxMobile) {
+                        font-size: 1.5rem !important;
+                    }
                 }
             }
         }
@@ -104,7 +132,7 @@
         }
         .special-h {
             @media (max-width: $maxMobile) {
-                margin-left: 35%;
+                margin-left: 30%;
                 &::after {
                     top: 45px;
                     left: 5px;
@@ -194,6 +222,13 @@
         }
         @media (min-width: $maxMobile) and (max-width: $maxSmall) {
             margin-left: 50px;
+        }
+        .listItem {
+            @media (max-width: $maxSmall) {
+                margin-right: 5px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
         }
     }
     .gallery {

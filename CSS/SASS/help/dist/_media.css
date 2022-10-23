@@ -394,6 +394,10 @@ body {
   text-transform: uppercase;
 }
 
+.background-image .firstBack {
+  height: 830px !important;
+}
+
 @media (max-width: 600px) {
   .nav-bar .brandName {
     margin-left: 35px;
@@ -402,6 +406,25 @@ body {
 @media (min-width: 767px) and (max-width: 991px) {
   .nav-bar .brandName {
     margin-left: -75px;
+  }
+}
+@media (max-width: 767px) {
+  .nav-bar .brandName a h1 {
+    font-size: 20px;
+    width: 90px;
+    height: 85px;
+  }
+}
+@media (max-width: 767px) {
+  .nav-bar .brandName a h1::after {
+    border-width: 60px;
+    top: -65px;
+  }
+}
+@media (max-width: 767px) {
+  .nav-bar .brandName a h1::before {
+    border-width: 60px;
+    top: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -460,8 +483,10 @@ body {
     line-height: 2.5rem;
   }
 }
-.header .bxslider .bxslider-text .new-size span {
-  font-size: 1.5rem !important;
+@media (max-width: 600px) {
+  .header .bxslider .bxslider-text .new-size span {
+    font-size: 1.5rem !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -491,7 +516,7 @@ body {
 }
 @media (max-width: 600px) {
   .ourPortfolio .portfolioInfo .special-h {
-    margin-left: 35%;
+    margin-left: 30%;
   }
   .ourPortfolio .portfolioInfo .special-h::after {
     top: 45px;
@@ -584,6 +609,13 @@ body {
 @media (min-width: 600px) and (max-width: 767px) {
   .project .projectLink {
     margin-left: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .project .projectLink .listItem {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 }
 @media (max-width: 600px) {
