@@ -99,11 +99,11 @@ body {
 }
 .nav-bar .toggle-menu.menu-active::before {
   content: "";
-  border-width: 10px;
+  border-width: 15px;
   border-style: solid;
   border-color: transparent transparent #dde5bc transparent;
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 10px;
 }
 .nav-bar .toggle-menu span {
@@ -287,6 +287,7 @@ body {
 
 .testimonials .slider .active {
   display: block;
+  padding: 10px;
 }
 .testimonials .slider .hidden {
   display: none;
@@ -479,7 +480,7 @@ body {
     display: block;
     position: absolute;
     right: 10px;
-    top: 170px;
+    top: 140px;
     width: 60%;
     border-radius: 20px;
     text-align: center;
